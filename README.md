@@ -2,6 +2,8 @@
 
 Static personal academic website for `https://xinhufeng.github.io/`.
 
+The site also includes a playable Tetris page at `/tetris/`, powered by the MIT-licensed Blockrain.js engine.
+
 ## Preview Locally
 
 ```powershell

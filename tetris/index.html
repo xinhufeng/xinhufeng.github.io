@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Tetris | Xinhu Feng</title>
+  <meta name="author" content="Xinhu Feng">
+  <meta name="description" content="Play Tetris on Xinhu Feng's personal website.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:300,400,500">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/vendor/blockrain/blockrain.css">
+  <link rel="stylesheet" href="/assets/css/tetris.css">
+</head>
+<body class="fixed-top-nav tetris-page">
+  <header>
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand title font-weight-lighter" href="/">Xinhu Feng</a>
+        <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse text-right" id="navbarNav">
+          <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item"><a class="nav-link" href="/">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="/publication/">Publication</a></li>
+            <li class="nav-item"><a class="nav-link" href="/TaW/">Activities</a></li>
+            <li class="nav-item"><a class="nav-link" href="/awards/">Awards</a></li>
+            <li class="nav-item active"><a class="nav-link" href="/tetris/"><i class="fas fa-gamepad" aria-hidden="true"></i> Tetris<span class="sr-only">(current)</span></a></li>
+            <li class="toggle-container">
+              <button id="light-toggle" title="Change theme" aria-label="Change theme">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <progress id="progress" value="0"></progress>
+  </header>
+
+  <main class="container tetris-main">
+    <header class="tetris-heading">
+      <div>
+        <h1 class="post-title">Tetris</h1>
+        <p class="post-description">Xinhu's break between space weather plots.</p>
+      </div>
+      <div class="tetris-toolbar" role="toolbar" aria-label="Game controls">
+        <button class="tetris-tool" id="tetris-restart" type="button" title="Restart game" aria-label="Restart game">
+          <i class="fas fa-redo-alt" aria-hidden="true"></i>
+        </button>
+        <button class="tetris-tool" id="tetris-pause" type="button" title="Pause game" aria-label="Pause game" aria-pressed="false">
+          <i class="fas fa-pause" aria-hidden="true"></i>
+        </button>
+        <button class="tetris-tool" id="tetris-autoplay" type="button" title="Toggle autoplay" aria-label="Toggle autoplay" aria-pressed="false">
+          <i class="fas fa-robot" aria-hidden="true"></i>
+        </button>
+        <button class="tetris-tool" id="tetris-fullscreen" type="button" title="Enter fullscreen" aria-label="Enter fullscreen">
+          <i class="fas fa-expand" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <section class="tetris-stage" id="tetris-stage" aria-label="Tetris game">
+      <div class="tetris-board" id="tetris-game"></div>
+      <aside class="tetris-meta" aria-live="polite">
+        <div class="tetris-stat">
+          <span class="tetris-stat-label">Best</span>
+          <strong id="tetris-best">0</strong>
+        </div>
+        <div class="tetris-stat">
+          <span class="tetris-stat-label">Status</span>
+          <strong id="tetris-status">Ready</strong>
+        </div>
+        <div class="tetris-keyboard" aria-hidden="true">
+          <span><i class="fas fa-arrow-left"></i></span>
+          <span><i class="fas fa-arrow-up"></i></span>
+          <span><i class="fas fa-arrow-right"></i></span>
+          <span><i class="fas fa-arrow-down"></i></span>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="fixed-bottom">
+    <div class="container mt-0">&copy; Copyright 2026 Xinhu Feng.</div>
+  </footer>
+
+  <script src="/assets/vendor/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/blockrain/blockrain.jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/tetris.js"></script>
+</body>
+</html>
