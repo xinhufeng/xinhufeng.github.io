@@ -327,6 +327,17 @@ article p {
   margin-bottom: 0.8rem;
 }
 
+.publication-image {
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.08);
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
 .publication-thumb {
   aspect-ratio: 4 / 3;
   border: 1px solid var(--global-divider-color);
